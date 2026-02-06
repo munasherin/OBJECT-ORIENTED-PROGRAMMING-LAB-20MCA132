@@ -1,4 +1,4 @@
-package afnanashraf;
+package muna;
 
 import java.util.Scanner;
 
