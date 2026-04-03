@@ -1,5 +1,4 @@
 package muna;
-
 import java.util.Scanner;
 
 class Complex {
@@ -17,15 +16,17 @@ class Complex {
         return new Complex(real + c.real, imag + c.imag);
     }
 
-    // Display method
+    // Display method (handles negative imaginary part cleanly)
     void display() {
-        System.out.println(real + " + " + imag + "i");
+        if (imag < 0)
+            System.out.println(real + " - " + Math.abs(imag) + "i");
+        else
+            System.out.println(real + " + " + imag + "i");
     }
 }
 
 public class ComplexAddition {
     public static void main(String[] args) {
-
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Enter first complex number:");
@@ -46,7 +47,6 @@ public class ComplexAddition {
 
         // Add
         Complex sum = c1.add(c2);
-
         System.out.print("Sum of complex numbers: ");
         sum.display();
 

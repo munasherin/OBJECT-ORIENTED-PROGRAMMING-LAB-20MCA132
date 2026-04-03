@@ -2,7 +2,7 @@ package muna;
  
 import java.util.Scanner;
 
-class Employee {
+//class Employee {
     int eNo;
     String eName;
     double eSalary;

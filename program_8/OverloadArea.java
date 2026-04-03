@@ -1,28 +1,26 @@
 package muna;
-
 import java.util.Scanner;
 
-class Area 
-    {
-    double calculate(double radius) 
-	{
-        return 3.14 * radius * radius;
-    	}
-    double calculate(double length, double breadth) 
-	{
-        return length * breadth;
-    	}
-    double calculate(int base, int height) 
-	{
-        return 0.5 * base * height;
-    	}
+class Area {
+
+    // Area of Circle
+    double calculate(double radius) {
+        return Math.PI * radius * radius; // More accurate than 3.14
     }
 
-public class OverloadArea 
-    {
-    public static void main(String[] args) 
- {
+    // Area of Rectangle
+    double calculate(double length, double breadth) {
+        return length * breadth;
+    }
 
+    // Area of Triangle
+    double calculate(int base, int height) {
+        return 0.5 * base * height;
+    }
+}
+
+public class OverloadArea {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Area obj = new Area();
 
